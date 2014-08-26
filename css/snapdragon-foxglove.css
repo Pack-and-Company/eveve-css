@@ -1,0 +1,289 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Layout
+ * Center page with
+ *    form { width: 100%; }
+ *    fieldset { margin: 0 auto; }
+ */
+
+@font-face {
+	font-family: "Montserrat Regular";
+	src: url("https://www.pack.co.nz/fonts/julieta-ulanovsky_montserrat/Montserrat-Regular.eot"); /* IE */
+	src: local("Montserrat-Regular"), url("https://www.pack.co.nz/fonts/julieta-ulanovsky_montserrat/Montserrat-Regular.ttf") format("truetype"); /* Non IE */
+	/* https://www.pack.co.nz/fonts/julieta-ulanovsky_montserrat/OFL.txt */
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #666;
+	background-color: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	line-height: 20.0625px;
+	font: 13px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+form 
+{
+
+	padding: 0;
+	margin: 0;
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+fieldset
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+
+hr {
+	height: 1px;
+	margin: 300px 0;
+}
+
+fieldset hr { display: none; }
+
+/* ******************************************************************
+ * Headings & Text
+ */
+
+/* Book a table at<br/>Site */
+h3 { display: none; }
+br { display: none; }
+
+.time 
+{
+	/* Confirmed table time on page 3 */
+	font-family: "Montserrat-Regular", Arial, sans-serif;
+	text-transform: uppercase;
+	display:inline-block;
+	font-size:14px;
+	margin:5px 0;
+	font-weight:normal;	
+	text-align: center;
+}
+
+p 
+{	
+	/* Inline style on p sets margin-bottom: 0;
+	 * Override with !important
+	 */
+	margin: 10px 0 0 0 !important;
+}
+
+h5,
+.notice 
+{
+	/* We may not accept your booking if the email ... */
+	/* You must enter a valid phone number */
+	font-size:10px;
+	font-style: italic;
+}
+
+a:link,
+a:visited
+{
+	color:  #666;
+	text-decoration: underline;
+}
+
+a:hover
+{
+	color:  #6f9c14;
+	text-decoration: underline;
+}
+
+a:active
+{
+	color:  #666;
+}
+
+a
+{
+	-webkit-transition: 0.4s ease-in;
+	-moz-transition: 0.4s ease-in;
+	-o-transition: 0.4s ease-in;
+	-webkit-transition-property: border, color;
+	-moz-transition-property: border, color;
+	-o-transition-property: border, color;
+}
+
+/* ******************************************************************
+ * Form Labels
+ */
+
+label 
+{
+	/* Form Element wrapper */
+	margin-top: 15px;
+	padding: 0;
+	display: block;
+	clear: both;
+}
+
+label strong,
+td strong
+{
+	font-weight: normal;
+	text-align: right;
+	display: block;
+	margin-top:0;
+	padding:0;
+	padding-right: 2px;
+	width: 120px;
+}
+
+label strong 
+{
+	height: 38px;
+	float:left;
+} 
+
+label p {
+	/* Inline style on p sets margin-bottom: 0;
+	 * Override with !important
+	 */
+	font-size: 10px;
+	margin: 0 !important;
+}
+
+label strong:after,
+td strong:after
+{
+	content: ":";
+}
+
+/* ******************************************************************
+ * Inputs
+ */
+
+input, 
+textarea, 
+select 
+{ 
+	/* Popup menus for Month / Date / Session */
+	/* Form textareas on last page */
+	background: #fff;
+}
+
+label input,
+td input
+{
+	height: 30px;
+	border: 1px solid #ccc; 
+	width: 250px; 
+}
+
+label input
+{ 
+	vertical-align: top; 
+	margin: 0; 
+}
+
+td input 
+{
+	float: left;
+	margin: 0 0 0 0;
+	padding: 2px;
+	font-size: 12px;
+	line-height: 30px;
+}
+
+textarea
+{
+	border: 1px solid #ccc; 
+	width: 250px; 
+	height: 50px;
+}
+
+label select 
+{
+	height: 30px;
+	width: 150px;
+}
+
+/* ******************************************************************
+ * Buttons
+ */
+
+.button_large 
+{
+	/* 'Check Availability' and 'Book' */
+	color: #666;
+	height: 36px;
+	width: 150px;
+	font-size: 13px;
+	margin-left: 120px;
+	padding: 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.button 
+{
+	/* Available timeslots */
+	color: #666;
+	height: 35px;
+	width: 70px;
+	font-size: 13px;
+	border: 0;
+	margin: 5px 10px 5px 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+
+}
+
+.button:hover, 
+.button_large:hover 
+{
+	color: #fff;
+	background-color: #6f9c14;
+	-webkit-transition: 0.4s ease-in;
+	-moz-transition: 0.4s ease-in;
+	-o-transition: 0.4s ease-in;
+	-webkit-transition-property: background-color color;
+	-moz-transition-property: background-color color;
+	-o-transition-property: background-color color;
+}
+
+/* ******************************************************************
+ * Table Elements
+ * Used to lay out the booking details form
+ */
+
+table 
+{
+	/* Inline style on table sets margin-left: -30px;
+	 * Override with !important
+	 */
+	margin: 0 !important;
+	padding: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+tr 
+{
+	padding: 0;
+	margin: 0;
+}
+
+td 
+{
+	margin: 0;
+	padding-top: 5px;
+	vertical-align: middle;
+}

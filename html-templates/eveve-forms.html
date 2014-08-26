@@ -1,0 +1,375 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB" lang="en-GB">
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<title>Book a Table at Test Restaurant</title>
+<meta name="robots" content="noindex,nofollow" />
+<link href="la-zeppa.css" rel="stylesheet" type="text/css" />
+
+
+<script language="javascript">
+
+var iAdj;
+
+var WeekDay = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+var Today = 29;
+var Firsts = [3,6,1,4,6,2];
+var Days = [31,30,31,30,31,31];
+var Adj = [0,3,33,64,94,125,156];
+
+
+var Covers = [1,2,3,4,5,6,7,8,9,10];
+var nCover = 0;
+
+var SESS = 0;
+var DayZero = 41513;
+
+
+	function MonthClick(iMonth, iSelect) {
+		var SelBox = document.Form1.Day; var Day;
+		var nDay = Days[iMonth]; var iDay = Firsts[iMonth]; var First;
+		iAdj = Adj[iMonth];
+//alert("iAdj=" + iAdj);
+//alert('MonthClick ' + iMonth + '/' + iSelect);
+		SelBox.options.length = 0;
+		if (iMonth > 0) First = 1;
+		else First = Today;
+		for (var i = First; i <= nDay; ++i) {
+			if (i < 10) Day = '0' + i;
+			else Day = '' + i;
+			Day += ' ' + WeekDay[iDay];
+ 			if (iMonth == 0) {
+				if (i == First) Day += ' (today)';
+				if (i == First + 1) Day += ' (tomorrow)';
+			}
+//alert('Day=' + Day);
+			SelBox.options[SelBox.options.length] = new Option(Day, Day, false, ((i - First) == iSelect));
+			if (++iDay > 6) iDay = 0;
+		}
+		SessionLoad(iDay);
+	}
+
+	function SessionLoad(iDay) {
+		if (!SESS) return;
+		var iActual = iDay + iAdj;
+		var SelBox = document.Form1.Session;
+		var iSession = DaySessions[iActual];
+		var SessionNames = Sessions[iSession];
+//alert('day=' + iActual + ', iSession=' + iSession + ', SessionNames=' + SessionNames);
+		SelBox.options.length = 0;
+		if (SessionNames.length > 0) {
+			for (var i = 0; i < SessionNames.length; ++i) {
+				SelBox.options[i] = new Option(SessionNames[i]);
+			}
+		} else SelBox.options[0] = new Option('Closed');
+	}
+
+	function CoversSet() {
+		var Box = document.Form1.Covers;
+//alert('Covers set ' + Covers.length);
+		Box.options.length = 0;
+		Box.options[0] = new Option("");
+		for (var i = 0; i < Covers.length; ++i) {
+			Box.options[Box.options.length] = new Option(Covers[i], Covers[i], false, (Covers[i] == nCover));
+		}
+	}
+
+	function DateSet(Date) {
+		var nDay = Date, MonthDays;
+//alert('DateSet ' + Date);
+		for (var iMonth = 0; iMonth < Days.length; ++iMonth) {
+			if (iMonth) MonthDays = Days[iMonth];
+			else MonthDays = Days[0] - Today + 1;
+			if (nDay < MonthDays) {
+				MonthClick(iMonth, nDay);
+				SessionLoad(Date);
+				return;
+			}
+			nDay -= MonthDays;
+		}
+//alert('DateSet done');
+	}
+		
+	function Load() {
+		DateSet(41513 - DayZero);
+		CoversSet();
+	}
+
+</script>
+</head>
+
+<body onload="Load()">
+
+<form name="Form1" action="http://nz3.eveve.com/TMS/elgusto/TimesGet.htm" method="post">
+	<fieldset>
+
+		<h3>Book a Table at<br/>Neighbourhood</h3>
+
+		<h3></h3>
+
+		<p>Please select the number of guests dining and the required date</p>
+
+		<input type=hidden name=SVC value="tms2 elgusto TimesGet" />
+		<input type=hidden name=Portal value="" />
+		<input type=hidden name=Offer value="" />
+		<input type=hidden name=Language value=0 />
+
+		<label>
+			<strong>Number of Guests</strong>
+			<select name=Covers id=Covers>
+				<option value=1 selected>1
+				<option value=2>2
+				<option value=3>3
+			</select>
+			<p style="margin-bottom:0px">For larger parties please reserve by telephone.</p>
+		</label>
+
+		<label>
+			<strong>Month</strong>
+			<select name=Month id=Month onchange="MonthClick(document.Form1.Month.selectedIndex)">
+				<option value=8/13 selected>August 2013
+				<option value=9/13>September 2013
+				<option value=10/13>October 2013
+				<option value=11/13>November 2013
+				<option value=12/13>December 2013
+				<option value=1/14>January 2014
+			</select>
+		</label>
+
+		<label>
+			<strong>Date</strong>
+			<select name=Day id=Day onchange="SessionLoad(document.Form1.Day.selectedIndex)">
+				<option value=1>1 Mon
+				<option value=2>2 Tue
+				<option value=3>3 Wed
+				<option value=4>4 Thu
+				<option value=5>5 Fri
+			</select>
+		</label>
+		
+		<label>
+			<strong>Session</strong>
+			<select name=Session>
+				<option value=Dinner selected>Dinner
+			</select>	
+		</label>
+
+		<label></label>
+
+		<br/>
+
+		<input type="submit" class="button_large" value="Check Availability" />
+
+	</fieldset>
+</form>
+
+<hr>
+
+<form name="Form1" method="post">
+	<fieldset>
+		<h3></h3>
+		<h3>Book a Table at <br/>Neighbourhood</h3>
+		<h4>You cannot book beyond Sat 2 Nov at present</h4><br />
+		<A href="http://nz3.eveve.com/tms/roxybistro/AvailCheck.htm?portal=,offer=">Change booking details</A>
+	</fieldset>
+
+</form>
+
+
+<hr>
+
+<form name="Form2" method="post">
+	<fieldset>
+
+		<h3>Book a Table at<br/>Neighbourhood</h3>
+
+		<h3></h3>
+
+		<A href="#">Change Booking Details</A><br/><br/>
+
+		<input type=hidden name=SVC value="tms2 elgusto Details" />
+		<input type=hidden name=Date value=41514 />
+		<input type=hidden name=Covers value=2 />
+		<input type=hidden name=Portal value="" />
+		<input type=hidden name=Offer value="" />
+		<input type=hidden name=Area value="-1" />
+		<input type=hidden name=Lang value=0 />
+
+		<label>		</label>
+
+		<h4>We can offer you a table for  at the following times on Friday, August 30, 2013</h4>
+		<hr />
+		<h4>Dinner (from  5:00pm to 9:30pm)</h4>
+
+		<input type=submit class=button name=Time value="5:00pm">
+		<input type=submit class=button name=Time value="5:30pm">
+		<input type=submit class=button name=Time value="6:00pm">
+		<input type=submit class=button name=Time value="6:30pm">
+		<input type=submit class=button name=Time value="7:00pm">
+		<input type=submit class=button name=Time value="7:30pm">
+		<input type=submit class=button name=Time value="8:00pm">
+		<input type=submit class=button name=Time value="8:30pm">
+		<input type=submit class=button name=Time value="9:00pm">
+		<input type=submit class=button name=Time value="9:30pm">
+
+		<h4>To book a table, please click on the time you require</h4>
+		<input type=hidden name=Verify value="E086F4CA">
+		<br />
+	</fieldset>
+</form>
+
+<hr>
+
+<form name="Form3" method="post">
+	<fieldset>
+		<h3></h3>
+		<h3>Book a Table at<br />Neighbourhood</h3>
+		You have requested a table as follows: 
+		<h3 class="time">Friday, August 30, 2013 at 6:00pm for 2 guests</h3>
+		<p><A href="http://nz3.eveve.com/tms/elgusto/AvailCheck.htm?covers=2&date=41514&portal=&offer=">
+		Change Booking Details</A></p>
+
+	  	<p style="margin-bottom:0px">Please complete your contact details below, then click the Book button to complete your reservation.</p>
+        <p>* = required fields &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+		<input type=hidden name=SVC value="tms2 elgusto Book" />
+		<input type=hidden name=Serial value=2192 />
+		<input type=hidden name=Date value=41514 />
+		<input type=hidden name=Covers value=2 />
+		<input type=hidden name=Time value="6:00pm" />
+		<input type=hidden name=Portal value="" />
+		<input type=hidden name=Offer value="" />
+		<input type=hidden name=Area value="-1" />
+		<input type=hidden name=Lang value=0 />
+
+				<table style="margin-left:-30px;">
+			
+			
+			<tr><td><strong>*First Name</strong></td>
+			<td><input type=text name=FirstName id=name  value=""></td>
+			</tr>
+			<tr><td><strong>*Last Name</strong></td>
+			<td><input type=text name=Name id=name  value=""></td>
+			</tr>
+
+            <tr>
+            	<td ></td>
+        		<td></td>
+            </tr>
+            <tr>
+            	<td><strong>*Mobile Phone</strong></td>
+                <td><input type=text name=Phone id=Phone value=""></td>
+          	</tr>
+            <tr>
+            	<td>
+</td>
+
+        		<td></td>
+           	</tr>
+            <tr> 
+<tr><p>Important: If your phone number is international, please use the following format: +PhoneNumber </p></tr><br/>
+   
+            	<td><strong>*E-mail</strong></td>
+            	<td><input type=text name=Email value="" /></td>
+            </tr>
+			
+			<tr><td><strong>Special requests</strong></td><td><textarea name=Notes cols=20></textarea></td></tr>
+
+			
+			
+        </table>
+
+
+		<p>I would like to hear about special offers & events at Northern Steamship<input type="checkbox" name="OptIn" checked=""></p>
+
+		<p><input type=submit class=button_large name=HourMin value="Book"></p>
+		
+		<p class="notice">We may not accept your booking if the email address you supply is not valid. If you use anti-spam measures, please ensure that confirmations@eveve.com is whitelisted.</p>
+	</fieldset>
+</form>
+
+<hr>
+
+<form name="Form1" method="post">
+	<fieldset>
+		<h3></h3>
+		<h3>Book a Table at<br />Neighbourhood</h3>
+		<h3 class="time">Friday, November 1, 2013 at 1:00pm for 2 guests</h3>		
+		<p><A href="http://nz3.eveve.com/tms/roxybistro/AvailCheck.htm?covers=2&date=41577&portal=&offer=">
+		Change Booking Details</A></p>
+
+	  	<p style="margin-bottom:0px">Please complete your contact details below, then click the Book button to complete your reservation.</p>
+        <p>* = required fields &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+		<input type=hidden name=SVC value="tms2 roxybistro Book" />
+		<input type=hidden name=Serial value=1058 />
+		<input type=hidden name=Date value=41577 />
+		<input type=hidden name=Covers value=2 />
+		<input type=hidden name=Time value="1:00pm" />
+		<input type=hidden name=Portal value="" />
+		<input type=hidden name=Offer value="" />
+		<input type=hidden name=Area value="-1" />
+		<input type=hidden name=Lang value=0 />
+
+		<table style="margin-left:-30px;">
+			<tr>
+				<td><strong>*Name</strong></td>
+				<td><input type=text name=Name id=name value=""></td>
+			</tr>
+
+            <tr>
+            	<td ></td>
+        		<td><h5>You must enter a valid phone number</h5></td>
+            </tr>
+            <tr>
+            	<td><strong>*Mobile Phone</strong></td>
+                <td><input type=text name=Phone id=Phone value=""></td>
+          	</tr>
+            <tr>
+            	<td></td>
+        		<td><h5>You must enter a valid e-mail address</h5></td>
+           	</tr>
+            <tr> 
+			<tr>
+				<p>Important: If your phone number is international, please use the following format: +PhoneNumber </p></tr><br/>
+            	<td><strong>*E-mail</strong></td>
+            	<td><input type=text name=Email value="" /></td>
+            </tr>
+        </table>
+
+		<h5>You must enter a Name</h5>
+		
+		<p>I would like to hear about special offers & events at Northern Steamship<input type="checkbox" name="OptIn" checked=""></p>
+
+	  	<p><input type=submit class=button_large name=HourMin value="Book"></p>
+		
+	  	<p class="notice">We may not accept your booking if the email address you supply is not valid. If you use anti-spam measures, please ensure that confirmations@eveve.com is whitelisted.</p>
+	</fieldset>
+
+</form>
+
+
+<hr>
+
+<form name="Form4" method="post">
+	<fieldset>
+		<h3></h3>
+
+		<h3>Book a Table at <br/>Neighbourhood</h3>
+
+		<h4>Your table for 2 has been booked for Friday, December 9, 2011 at 7:30pm<br/><br/>
+			A confirmation email will be sent to scott@eveve.com<br/>
+		<br/>
+		</h4>
+		<br />
+
+		<A href="http://87.106.129.130.com/tms/cirrikfulham/AvailCheck.htm?portal=,offer="></A>
+	</fieldset>
+</form>
+
+<hr>
+
+</body>
+</html>

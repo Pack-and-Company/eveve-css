@@ -1,0 +1,293 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Layout
+ * Center page with
+ *    form { width: 100%; }
+ *    fieldset { margin: 0 auto; }
+ */
+
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	background-color: #000;
+	background: url("http://www.pack.co.nz/images/eveve/nuffield-bg.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: "Lucida Console", Verdana, Courier, monospace;
+	font-size: 12px;
+	line-height: 14px;
+	-webkit-font-smoothing: antialiased;
+}
+
+form 
+{
+	padding: 0;
+	padding-top: 50px;
+	margin: 0;
+	background: url("http://www.pack.co.nz/images/eveve/nuffield-logo.png") no-repeat left top;
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	width: 100%;
+}
+
+fieldset
+{
+	width: 400px;
+	min-height: 340px;
+	margin: 0 auto 300px 260px;
+	padding: 13px;
+	background: #000;
+	border-top: 10px solid white;
+	border-left: 10px solid white;
+	border-right: 10px solid white;
+	border-bottom: 50px solid white;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+	-webkit-box-shadow: 5px 5px 5px #555;
+	-moz-box-shadow: 5px 5px 5px #555;
+	box-shadow: 5px 5px 5px #555;
+}
+
+
+hr {
+	height: 1px;
+	margin: 0;
+	display: none;
+}
+
+fieldset hr { display: none; }
+
+/* ******************************************************************
+ * Headings & Text
+ */
+
+/* Book a table at<br/>Site */
+h3 { display: none; }
+br { display: none; }
+
+.time 
+{
+	/* Confirmed table time on page 3 */
+	display:inline-block;
+	font-size:13px;
+	margin:5px 0;
+	font-weight:normal;	
+	text-align: center;
+}
+
+h4
+{
+	/* Your table for 2 has been booked for ... */
+	/* You cannot book beyond ... */
+	margin-bottom:0.5em; 
+	margin-top:0.5em; 
+	font-size:13px; 
+	font-weight: normal;
+}
+
+p 
+{	
+	/* Inline style on p sets margin-bottom: 0;
+	 * Override with !important
+	 */
+	margin: 10px 0 0 0 !important;
+}
+
+h5,
+.notice 
+{
+	/* We may not accept your booking if the email ... */
+	/* You must enter a valid phone number */
+	font-size:10px;
+	font-style: italic;
+}
+
+a
+{
+	color: #fff;
+	text-decoration: underline;
+}
+
+a:hover
+{ 
+	text-decoration: none;
+}
+
+/* ******************************************************************
+ * Form Labels
+ */
+
+label 
+{
+	/* Form Element wrapper */
+	margin-top: 15px;
+	padding: 0;
+	display: block;
+	clear: both;
+}
+
+label strong,
+td strong
+{
+	font-weight: normal;
+	text-align: right;
+	display: block;
+	margin-top:0;
+	padding:0;
+	padding-right: 2px;
+	width: 150px;
+}
+
+label strong 
+{
+	height: 38px;
+	float: left;
+} 
+
+label p {
+	/* Inline style on p sets margin-bottom: 0;
+	 * Override with !important
+	 */
+	font-size: 10px;
+	margin: 0 !important;
+}
+
+label strong:after,
+td strong:after
+{
+	content: ":";
+}
+
+/* ******************************************************************
+ * Inputs
+ */
+
+input, 
+textarea, 
+select 
+{ 
+	/* Popup menus for Month / Date / Session */
+	/* Form textareas on last page */
+	background: #fff;
+}
+
+label input,
+td input
+{
+	height: 30px;
+	border: 1px solid #ccc; 
+	width: 240px; 
+}
+
+label input
+{ 
+	vertical-align: top; 
+	margin: 0; 
+}
+
+td input 
+{
+	float: left;
+	margin: 0 0 0 0;
+	padding: 2px;
+	margin-top: 2px;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+textarea
+{
+	border: 1px solid #ccc; 
+	width: 240px; 
+	height: 50px;
+	margin-top: 2px;
+}
+
+label select 
+{
+	width: 150px;
+	margin-top: -2px;
+}
+
+/* ******************************************************************
+ * Buttons
+ */
+
+.button,
+.button_large
+{
+	font-family: "Lucida Console", Verdana, Courier, monospace;	
+	font-size: 13px;
+}
+
+.button_large 
+{
+	/* 'Check Availability' and 'Book' */
+	height: 36px;
+	width: 150px;
+	margin-left: 150px;
+	padding: 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.button 
+{
+	/* Available timeslots */
+	height: 35px;
+	width: 65px;
+	font-size: 13px;
+	border: 0;
+	margin: 5px 14px 5px 14px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+
+}
+
+.button:hover, 
+.button_large:hover 
+{
+	background-color: #000;
+	color: #fff;
+}
+
+/* ******************************************************************
+ * Table Elements
+ * Used to lay out the booking details form
+ */
+
+table 
+{
+	/* Inline style on table sets margin-left: -30px;
+	 * Override with !important
+	 */
+	margin: 0 !important;
+	padding: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+tr 
+{
+	padding: 0;
+	margin: 0;
+}
+
+td 
+{
+	margin: 0;
+	vertical-align: middle;
+}

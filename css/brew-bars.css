@@ -1,0 +1,121 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Resets form inputs */
+select, input, textarea { margin: 0; padding: 0; border: none; }
+
+/* Override inline styles */
+table { margin-left: 0 !important; }
+
+/********************** Testing */
+hr { height: 300px; margin: 0; display: block; border: none; }
+/* Testing **********************/
+
+/* Fonts */
+@font-face {
+    font-family: 'Pintor';
+    src: url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/Pintor.eot');
+    src: url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/Pintor.eot?#iefix') format('embedded-opentype'),
+         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/Pintor.ttf') format('truetype'),
+         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/Pintor.svg#Pintor') format('svg');
+}
+
+@font-face {
+    font-family: 'UbahnLightRegular';
+    src: url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.eot');
+    src: url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.woff') format('woff'),
+         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.ttf') format('truetype'),
+         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.svg#UbahnLightRegular') format('svg');
+}
+
+/* Hide some stuff */
+fieldset hr, h3:not(.time), br, a:empty { display: none; }
+
+/* Insert some stuff */
+label strong:after, td strong:after { content: ": "; }
+a:before { content: "< "; }
+
+/* Layout */
+
+body
+{
+	color: #000;
+	font-family: "UbahnLightRegular", Verdana, Courier, monospace;
+	line-height: 20px;
+	font-size: 15px;
+}
+
+label { display: block; }
+label strong,
+td strong {
+	display: inline-block;
+	width: 140px;
+	text-align: right;
+}
+
+h3.time { display: inline-block; }
+
+tr, td { height: 0; }
+td { vertical-align: top; }
+input[type=text] { height: 20px; }
+
+input[type=text],
+textarea {
+	width: 200px;
+	border: 1px solid black;
+	margin-left: 10px;
+
+}
+
+select {
+	height: 25px;
+	min-width: 200px;
+}
+textarea { height: 50px; }
+input[type=checkbox] { margin: 2px; }
+
+.button_large,
+.button,
+a,
+select {
+	font-family: "Pintor";
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 5px 5px;
+	color: #FFF;
+	background-color: #000;
+	text-transform: uppercase; 
+	font-size: 17px;
+	text-decoration: none;
+	border: none;
+}
+
+.button_large {
+	display: block;
+	min-width: 200px;
+	margin: 10px auto 5px 150px;
+}
+
+.button_large:hover,
+.button:hover,
+a:hover {
+	background-color: #fff;
+	color: #000;
+	-webkit-transition: color .2s ease-out;
+	-moz-transition: color .2s ease-out;
+	-o-transition: color .2s ease-out;
+	transition: color .2s ease-out;
+}
+
+/* Push form errors out of flow */
+td > h5,
+table + h5 { 
+	position: absolute;
+	color: #FF0000;
+}
+td > h5 { margin-left: 220px; }
+table + h5 { margin: -64px 0 0 360px; }
+
+
+
