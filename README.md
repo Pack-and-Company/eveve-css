@@ -1,8 +1,8 @@
 #Eveve Stylesheets
 
-Custom stylesheets for Eveve online bookings pages.
+Custom stylesheets for Eveve online bookings pages. The html on the booking pages can't be changed, and we can only insert CSS (no scripts). All fonts and images must be stored on our servers.
 
-Note: the html can't be changed, and we can only use CSS (no scripts).
+Don't add fonts or images to the repo.
 
 ### Recommended stylesheet setup:
 
