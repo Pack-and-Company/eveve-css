@@ -1,0 +1,254 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body
+{
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 13px;
+    line-height: 20.0625px;
+    font: 13px/1.6 Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+form 
+{
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+fieldset
+{
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+hr {
+    height: 1px;
+    margin: 300px 0;
+}
+
+fieldset hr, h3:not(.time), br, a:empty { display: none; }
+
+/* ******************************************************************
+ * Headings & Text
+ */
+
+
+.time 
+{
+    /* Confirmed table time on page 3 */
+    text-transform: uppercase;
+    display:inline-block;
+    font-size:14px;
+    margin:5px 0;
+    font-weight:normal; 
+    text-align: center;
+}
+
+p 
+{   
+    /* Inline style on p sets margin-bottom: 0;
+     * Override with !important
+     */
+    margin: 10px 0 0 0 !important;
+}
+
+h5,
+.notice 
+{
+    /* We may not accept your booking if the email ... */
+    /* You must enter a valid phone number */
+    font-size:10px;
+    font-style: italic;
+}
+
+a:link,
+a:visited
+{
+    color: #666666;
+    text-decoration: underline;
+}
+
+a:hover
+{
+    color: #000000;
+    text-decoration: underline;
+}
+
+a:active
+{
+    color: #9A0813;
+}
+
+a
+{
+    -webkit-transition: 0.4s ease-in;
+    -moz-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    -webkit-transition-property: border, color;
+    -moz-transition-property: border, color;
+    -o-transition-property: border, color;
+    color: #FFFFFF;
+}
+
+/* ******************************************************************
+ * Form Labels
+ */
+
+label 
+{
+    /* Form Element wrapper */
+    margin-top: 15px;
+    display: block;
+    clear: both;
+}
+
+label strong,
+td strong
+{
+    font-weight: normal;
+    text-align: right;
+    display: block;
+    margin-top: 0;
+    padding-right: 5px;
+    width: 100px;
+}
+
+label strong 
+{
+    height: 38px;
+    float: left;
+    margin: 5px 5px 0 0;
+} 
+
+label p {
+    /* Inline style on p sets margin-bottom: 0;
+     * Override with !important
+     */
+    font-size: 10px;
+    margin: 0 !important;
+}
+
+/* ******************************************************************
+ * Inputs
+ */
+
+input, 
+textarea, 
+select 
+{ 
+    /* Popup menus for Month / Date / Session */
+    /* Form textareas on last page */
+    background: #fff;
+}
+
+label input,
+td input
+{
+    height: 20px;
+    border: 1px solid #DAD9D9;
+    width: 180px;
+}
+
+label input
+{ 
+    vertical-align: top; 
+}
+
+td input 
+{
+    float: left;
+    margin: 0 0 0 0;
+    padding: 2px;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+textarea
+{
+    border: 1px solid #DAD9D9;
+    width: 180px;
+    height: 50px;
+}
+
+label select 
+{
+    border: 1px solid #DAD9D9;
+    height: 30px;
+    width: 180px;
+}
+
+/* ******************************************************************
+ * Buttons
+ */
+
+.button_large 
+{
+    /* 'Check Availability' and 'Book' */
+    color: #ffffff;
+    height: 36px;
+    width: 180px;
+    font-size: 13px;
+    margin-left: 110px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button 
+{
+    /* Available timeslots */
+    color: #ffffff;
+    height: 35px;
+    width: 70px;
+    font-size: 13px;
+    margin: 5px 10px 5px 0;
+    background-color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid #000000;
+}
+
+.button:hover, 
+.button_large:hover 
+{
+    color: #000000;
+    background-color: #ffffff;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    -webkit-transition-property: background-color color;
+    -moz-transition-property: background-color color;
+    -o-transition-property: background-color color;
+}
+
+/* ******************************************************************
+ * Table Elements
+ * Used to lay out the booking details form
+ */
+
+table 
+{
+    /* Inline style on table sets margin-left: -30px;
+     * Override with !important
+     */
+    margin: 0 !important;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td 
+{
+    padding-top: 5px;
+    vertical-align: middle;
+}
+
