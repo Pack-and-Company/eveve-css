@@ -52,13 +52,8 @@ fieldset hr, h3:not(.time), br, a:empty { display: none; }
     text-align: center;
 }
 
-p 
-{   
-    /* Inline style on p sets margin-bottom: 0;
-     * Override with !important
-     */
-    margin: 10px 0 0 0 !important;
-}
+p  { margin: 10px 0 0 0 !important; }
+h10 + p { margin-left: 110px !important; }
 
 h5,
 .notice 
@@ -108,6 +103,7 @@ label
     margin-top: 15px;
     display: block;
     clear: both;
+    overflow: auto;
 }
 
 label strong,
@@ -135,6 +131,7 @@ label p {
     font-size: 10px;
     margin: 0 !important;
 }
+
 
 /* ******************************************************************
  * Inputs
@@ -251,4 +248,3 @@ td
     padding-top: 5px;
     vertical-align: middle;
 }
-
