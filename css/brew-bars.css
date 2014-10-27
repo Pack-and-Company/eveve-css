@@ -14,19 +14,19 @@ hr { height: 300px; margin: 0; display: block; border: none; }
 /* Fonts */
 @font-face {
     font-family: 'Pintor';
-    src: url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/Pintor.eot');
-    src: url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/Pintor.eot?#iefix') format('embedded-opentype'),
-         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/Pintor.ttf') format('truetype'),
-         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/Pintor.svg#Pintor') format('svg');
+    src: url('//wordpress.pack.co.nz/wp-content/themes/everybodys/fonts/Pintor.eot');
+    src: url('//wordpress.pack.co.nz/wp-content/themes/everybodys/fonts/Pintor.eot?#iefix') format('embedded-opentype'),
+         url('//wordpress.pack.co.nz/wp-content/themes/everybodys/fonts/Pintor.ttf') format('truetype'),
+         url('//wordpress.pack.co.nz/wp-content/themes/everybodys/fonts/Pintor.svg#Pintor') format('svg');
 }
 
 @font-face {
     font-family: 'UbahnLightRegular';
-    src: url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.eot');
-    src: url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.woff') format('woff'),
-         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.ttf') format('truetype'),
-         url('http://www.everybodys.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.svg#UbahnLightRegular') format('svg');
+    src: url('//wordpress.pack.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.eot');
+    src: url('//wordpress.pack.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//wordpress.pack.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.woff') format('woff'),
+         url('//wordpress.pack.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.ttf') format('truetype'),
+         url('//wordpress.pack.co.nz/wp-content/themes/everybodys/fonts/ubahn-light-webfont.svg#UbahnLightRegular') format('svg');
 }
 
 /* Hide some stuff */
