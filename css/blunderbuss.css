@@ -1,0 +1,347 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Layout
+ * Center page with
+ *    form { width: 100%; }
+ *    fieldset { margin: 0 auto; }
+ */
+@font-face {
+    font-family: 'sf_movie_posterbold';
+    src: url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/sfmovieposter-bold-webfont.eot');
+    src: url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/sfmovieposter-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/sfmovieposter-bold-webfont.woff') format('woff'),
+         url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/fonts/sfmovieposter-bold-webfont.ttf') format('truetype'),
+         url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/sfmovieposter-bold-webfont.svg#sf_movie_posterbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'newportgothicregularregular';
+    src: url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/newpor__-webfont.eot');
+    src: url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/newpor__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/newpor__-webfont.woff') format('woff'),
+         url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/newpor__-webfont.ttf') format('truetype'),
+         url('//www.blunderbuss.co.nz/wp-content/themes/cucina-child/fonts/newpor__-webfont.svg#newportgothicregularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #F7F7F7;
+    font-family: newportgothicregularregular, Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 13px;
+    line-height: 20.0625px;
+    font: 13px/1.6 newportgothicregularregular, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+form 
+{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+fieldset
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+hr {
+    height: 1px;
+    margin: 300px 0;
+}
+
+fieldset hr { display: none; }
+
+/* ******************************************************************
+ * Headings & Text
+ */
+
+/* Book a table at<br/>Site */
+h3 {
+    font-weight:bold;
+    font-size:18px;s
+    
+}
+br { /*display: none;*/
+
+ }
+ 
+
+
+
+.time 
+{
+    /* Confirmed table time on page 3 */
+    text-transform: uppercase;
+    display:inline-block;
+    font-size:14px;
+    margin:5px 0;
+    font-weight:normal; 
+    text-align: center;
+}
+
+p 
+{   
+    /* Inline style on p sets margin-bottom: 0;
+     * Override with !important
+     */
+    margin: 10px 0 0 0 !important;
+}
+
+h5,
+.notice 
+{
+    /* We may not accept your booking if the email ... */
+    /* You must enter a valid phone number */
+    font-size:10px;
+    font-style: italic;
+}
+
+a:link,
+a:visited
+{
+    color: #333333;
+    text-decoration: underline;
+}
+
+a:hover
+{
+    color: #000000;
+    text-decoration: underline;
+}
+
+a:active
+{
+    color: #9A0813;
+}
+
+a
+{
+    -webkit-transition: 0.4s ease-in;
+    -moz-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    -webkit-transition-property: border, color;
+    -moz-transition-property: border, color;
+    -o-transition-property: border, color;
+    color: #333333;
+}
+
+/* ******************************************************************
+ * Form Labels
+ */
+
+label 
+{
+    /* Form Element wrapper */
+    margin-top: 15px;
+    padding: 0;
+    display: block;
+    clear: both;
+}
+
+label strong,
+td strong
+{
+    font-weight: normal;
+    text-align: right;
+    display: block;
+    margin-top: 0;
+    padding: 0;
+    padding-right: 2px;
+    width: 140px;
+    line-height: 30px;
+}
+
+label strong 
+{
+    height: 30px;
+    float:left;
+} 
+
+label p {
+    /* Inline style on p sets margin-bottom: 0;
+     * Override with !important
+     */
+    font-size: 10px;
+    margin: 0 !important;
+}
+
+label strong:after,
+td strong:after
+{
+    content: ":";
+}
+
+/* ******************************************************************
+ * Inputs
+ */
+
+input, 
+textarea, 
+select 
+{ 
+    /* Popup menus for Month / Date / Session */
+    /* Form textareas on last page */
+    background: #fff;
+}
+
+label input,
+td input
+{
+    height: 20px;
+    border: 1px solid #DAD9D9;
+    width: 210px;
+}
+
+label input
+{ 
+    vertical-align: top; 
+    margin: 0; 
+}
+
+td input 
+{
+    float: left;
+    margin: 0 0 0 0;
+    padding: 2px;
+    font-size: 12px;
+    line-height: 22px;
+    border: 1px solid #000;
+    height: 24px;
+    width: 180px;
+    color: #333;
+}
+
+textarea
+{
+    width: 210px;
+    height: 50px;
+    border: 1px solid #000;
+    width: 180px;
+    color: #333;
+}
+
+label select 
+{
+    border: 1px solid #000;
+    height: 30px;
+    width: 180px;
+    color: #333;
+}
+
+/* ******************************************************************
+ * Buttons
+ */
+
+.button_large 
+{
+    /* 'Check Availability' and 'Book' */
+    color: #000;
+    height: 36px;
+    width: 180px;
+    margin-left: 142px;
+    padding: 0;
+    background-color: #fff;
+    border: none;
+    border-radius: 1px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sf_movie_posterbold, Arial;
+    letter-spacing: 2px;
+    border: 1px solid #000;
+    
+}
+
+p input.button_large 
+{
+    /* 'Check Availability' and 'Book' */
+    margin: 10px 0 0 142px;
+    width: 186px;
+}
+
+.button 
+{
+    /* Available timeslots */
+    color: #000;
+    height: 35px;
+    width: 70px;
+    font-size: 13px;
+    border: 0;
+    margin: 5px 10px 5px 0;
+    background-color:#FFF ;
+    border: 1px solid #000;;
+    border-radius: 1px;
+    text-transform:uppercase;
+    font-weight:bold;
+    
+    
+}
+
+.button:hover, 
+.button_large:hover 
+{
+    color: #fff;
+    background-color: #000;
+    -webkit-transition: 0.4s ease-in;
+    -moz-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    -webkit-transition-property: background-color color;
+    -moz-transition-property: background-color color;
+    -o-transition-property: background-color color;
+
+
+    
+}
+
+/* ******************************************************************
+ * Table Elements
+ * Used to lay out the booking details form
+ */
+
+table 
+{
+    /* Inline style on table sets margin-left: -30px;
+     * Override with !important
+     */
+    margin: 0 !important;
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tr 
+{
+    padding: 0;
+    margin: 0;
+}
+
+td 
+{
+    margin: 0;
+    padding-top: 5px;
+    vertical-align: middle;
+}
